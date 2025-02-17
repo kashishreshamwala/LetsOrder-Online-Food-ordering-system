@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-iocn" href="images/logo.png">
+    <title>Login | Let's Order</title>
+    <link rel="stylesheet" href="css/loginStyle.css">
+    <script type="module" src="js/auth.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="loginEmail" placeholder="Enter your email">
+            </div>
+            
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="loginPassword" placeholder="Enter your password">
+            </div>
+
+            <button type="submit">Login</button>
+
+            <p><a href="#" id="reset">Forgot Password?</a></p>
+            <p>Don't have an account? <a href="register.html">Sign Up</a></p>
+        </form>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

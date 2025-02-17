@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-iocn" href="images/logo.png">
+    <title>View Order</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="view-order-page">
+        <div class="view-order-header">
+            <h2 class="view-order-title">Your Order</h2>
+            <a href="index.html" class="view-order-back-btn">← Back to Menu</a>
+        </div>
+
+        <div class="view-order-content">
+            <table id="order-items">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price (₹)</th>
+                        <th>Total (₹)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Order details will be inserted here dynamically -->
+                </tbody>
+            </table>
+
+            <div class="view-order-total">
+                <h3>Total Amount:</h3>
+                <span id="order-total">₹0.00</span>
+            </div>
+
+            <div class="view-order-footer">
+                <button class="place-order-btn" onclick="placeOrder()">&#9755; Place Order &#9754;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Empty Cart Alert -->
+    <div id="empty-cart-alert" class="empty-cart-alert">
+        <p>No items in the cart. Please add items before placing an order.</p>
+    </div>
+
+    <!-- Order Success Popup -->
+    <div id="order-success-popup" class="order-success-popup">
+        <canvas id="confetti-canvas"></canvas> <!-- Confetti Effect -->
+        <div class="popup-content">
+            <h2>🎉 Order Successfully Placed! 🎉</h2>
+            <p>Your delicious order is on its way. Thank you for choosing us!</p>
+            <button onclick="closeOrderPopup()">OK</button>
+        </div>
+    </div>
+
+    <script src="js/viewOrder.js"></script>
+</body>
+</html>

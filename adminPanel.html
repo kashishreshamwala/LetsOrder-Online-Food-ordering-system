@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-iocn" href="images/logo.png">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/adminStyle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/adminPanel.js" type="module" ></script>
+</head>
+<body>
+    <!-- Side Bar -->
+    <div class="sidebar">
+        <h1 class="logo">LetsOrder</h1>
+        <div class="sidebar-menus">
+            <a href="adminPanel.html"><ion-icon name="storefront-outline"></ion-icon>Home</a>
+            <a href="#" id="manageMenuBtn"><ion-icon name="receipt-outline"></ion-icon>Manage Menu Items</a>
+            <a href="adminPanel.html" id="registeredUsersBtn"><ion-icon name="person-outline"></ion-icon>Registered Users</a>
+        </div>
+        <div class="sidebar-logout">
+            <a href="login.html" id="logout"><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+        </div>
+    </div>
+    <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+    <div class="admin-container">
+        <header>
+            <h2>Admin Dashboard</h2> 
+        </header><br>
+
+        <section class="user-management">
+            <h3>Registered Users</h3><br>
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Phone No</th>
+                        <th>User Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Users will be loaded dynamically -->
+                </tbody>
+            </table>
+        </section><br>
+
+        <section class="stats">
+            <div>
+                <h3>Orders Placed</h3>
+                <p id="totalOrders">Loading...</p>
+            </div>
+        </section><br>
+
+        <section class="item-management hidden">
+            <h3>Manage Menu Items</h3>
+            <button id="admin-addItem">Add Item</button><br>
+            <div id="addItemForm" class="hidden"><br>
+                <input type="number" id="itemId" placeholder="Item ID">
+                <input type="text" id="itemName" placeholder="Item Name">
+                <input type="number" id="itemPrice" placeholder="Price">
+                <input type="text" id="itemImage" placeholder="Image URL">
+                
+                <!-- Category Dropdown -->
+                <label for="itemCategory">Category:</label>
+                <select id="itemCategory">
+                    <option value="healthy">Healthy</option>
+                    <option value="burger">Burger</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="chicken">Chicken</option>
+                    <option value="seaFood">Sea Food</option>
+                    <option value="coldDrink">Cold Drink</option>
+                </select>
+
+                <button id="addItemButton">Add</button>
+            </div>
+
+            <table id="itemTable">
+                <thead>
+                    <tr>
+                        <th>Item ID</th>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Image</th>
+                        <th>Category</th> <!-- ✅ Added Category Column -->
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Menu items will be loaded dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/adminPanel.js"></script>
+</body>
+</html>
